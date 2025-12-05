@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberSense</title>
+
+  <style>
+    /* GLOBAL */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f6ff;
+      color: #001246;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: #e4ebfb;
+      padding: 1rem 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .menu {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #001246;
+      font-weight: 600;
+    }
+
+    .btn-signin {
+      background: linear-gradient(90deg, #5d46ff, #7347ff);
+      color: white !important;
+      padding: 0.5rem 1.4rem;
+      border-radius: 30px;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 8vh 0 20vh;
+      overflow: hidden;
+      background: #f2f6ff;
+    }
+
+    /* RESPONSIVE SEMI-CIRCLE */
+    .semi-circle {
+      position: absolute;
+      top: -30vh;
+      left: -25vw;
+      width: 80vw;
+      height: 55vw; /* ~half circle ratio */
+      background: #e1e8fa;
+      opacity: 0.4;
+      border-bottom-left-radius: 40vw;
+      border-bottom-right-radius: 40vw;
+      z-index: 0;
+    }
+
+  
+    .hero-left h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .hero-left p {
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      max-width: 550px;
+      line-height: 1.6;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-yellow {
+      background: #ffbe3d;
+      padding: 0.9rem 1.7rem;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 900px) {
+      .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .semi-circle {
+        left: -40vw;
+        top: -35vh;
+        width: 120vw;
+        height: 80vw;
+        border-bottom-left-radius: 60vw;
+        border-bottom-right-radius: 60vw;
+      }
+    }
+    .hero-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.hero-left, .hero-right {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+   position: relative;
+  left: 10%;
+}
+
+@media (max-width: 900px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-left, .hero-right {
+    flex: unset;
+  }
+
+  .hero-right img {
+    max-width: 80%;
+    left: 0; /* remove left offset on mobile */
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">CyberSense</div>
+
+      <nav class="menu">
+        <a href="home.html">Spot the Phish</a>
+        <a href="results.html">Results</a>
+        <a href="">Contact Us</a>
+        <a href="">Dashboard ▼</a>
+        <a href="login.html" class="btn-signin">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="semi-circle"></div>
+
+    <div class="container hero-wrapper">
+
+      <div class="hero-left">
+        <h1>
+          Smarter awareness for a <br>
+          safer workplace.
+        </h1>
+
+        <p>
+          An intelligent phishing awareness and training platform designed to help
+          organizations reduce risks, strengthen human defenses, and improve
+          cybersecurity resilience.
+        </p>
+
+        <button class="btn-yellow">Start Training Now →</button>
+      </div>
+
+      <div class="hero-right">
+        <img src="images/home.png" alt="Cybersecurity">
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
